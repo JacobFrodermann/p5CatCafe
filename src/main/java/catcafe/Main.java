@@ -1,12 +1,6 @@
 package catcafe;
 
-/** Starter for the cat-café task. */
 public class Main {
-    /**
-     * And go.
-     *
-     * @param args command line parameters, not used
-     */
     public static void main(String... args) {
         CatCafe cafe = new CatCafe();
 
@@ -17,13 +11,16 @@ public class Main {
 
         System.out.println("Es schnurren " + cafe.getCatCount() + " Samtpfötchen.");
 
-        FelineOverLord meow = cafe.getCatByWeight(3, 4);
-        if (meow != null) System.out.println("Gewicht [3,4]: " + meow);
+        cafe.getCatByWeight(3, 4).ifPresent(cat ->
+            System.out.println("Gewicht [3,4]: " + cat)
+        );
 
-        meow = cafe.getCatByName("Morticia");
-        if (meow != null) System.out.println("Name 'Morticia': " + meow);
+        cafe.getCatByName("Morticia").ifPresent(cat ->
+            System.out.println("Name 'Morticia': " + cat)
+        );
 
-        meow = cafe.getCatByName("Miss Chief Sooky");
-        if (meow != null) System.out.println("Name 'Miss Chief Sooky': " + meow);
+        cafe.getCatByName("Miss Chief Sooky").ifPresent(cat ->
+            System.out.println("Name 'Miss Chief Sooky': " + cat)
+        );
     }
 }
