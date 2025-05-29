@@ -14,7 +14,6 @@ Diese rekursive Modellierung ermöglicht eine funktionale, unveränderliche Baum
 ### Vorteile
 
 - **Typensicherheit:** `Empty` statt `null` vermeidet `NullPointerExceptions`.
-- **Immutable Design:** Änderungen erzeugen neue Objekte → thread-sicher.
 - **Erweiterbarkeit:** Durch das Visitor-Pattern (`TreeVisitor`) können Traversierungsstrategien flexibel ergänzt werden.
 - **Gute Stream-Integration:** Dank `Iterable<T>`, `spliterator()` und `stream()` lassen sich moderne Java-Streams problemlos nutzen.
 
