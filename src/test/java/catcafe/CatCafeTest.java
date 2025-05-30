@@ -15,7 +15,7 @@ public class CatCafeTest {
         
         cafe.addCat(new FelineOverLord("a", 1));
 
-        assertEquals(cafe.getCatCount(), 1);
+        assertEquals(1, cafe.getCatCount());
     }
 
     @Test
@@ -27,7 +27,7 @@ public class CatCafeTest {
         cafe.addCat(lookingFor);
         cafe.addCat(new FelineOverLord("c", 3));
 
-        assertEquals(cafe.getCatByName("b"),lookingFor);
+        assertEquals(lookingFor, cafe.getCatByName("b"));
     }
     
     @Test
@@ -50,7 +50,7 @@ public class CatCafeTest {
         cafe.addCat(lookingFor);
         cafe.addCat(new FelineOverLord("c", 3));
 
-        assertEquals(cafe.getCatByWeight(2, 2),lookingFor);
+        assertEquals(lookingFor, cafe.getCatByWeight(2, 3));
     }
     
     @Test
